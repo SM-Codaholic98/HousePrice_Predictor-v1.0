@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <meta charset = "UTF-8">
+    <meta name = 'viewport' content = 'width=device-width, initial - scale = 1.0'>
+    <title>HousePrice_Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='grand-house-rendering-modern.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Ensures background covers the entire viewport height */
+        }
+    </style>
+    
+    <body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Avg. Area Income">Average Area Income:</label>
+            <input type="number" id="Avg. Area Income" name="Avg. Area Income" required><br>
+
+            <label for="Avg. Area House Age">Average House Age:</label>
+            <input type="number" id="Avg. Area House Age" name="Avg. Area House Age" required><br>
+
+            <label for="Avg. Area Number of Rooms">Number of Rooms:</label>
+            <input type="number" id="Avg. Area Number of Rooms" name="Avg. Area Number of Rooms" required><br>
+
+            <label for="Avg. Area Number of Bedrooms">Number of Bedrooms:</label>
+            <input type="number" id="Avg. Area Number of Bedrooms" name="Avg. Area Number of Bedrooms" required><br>
+
+            <label for="Area Population">Average Area Population:</label>
+            <input type="number" id="Area Population" name="Area Population" required><br>
+
+            <input type="submit" value="Predict Price">
+        </form>
+        {% if prediction_text %}
+        <div class="output">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+    </div>
+    
+    </body>
+    </html>
+    
+</html>
