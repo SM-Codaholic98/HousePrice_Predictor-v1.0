@@ -10,19 +10,19 @@
         <h1>House Price Prediction</h1>
         <form action="/predict" method="post">
             <label for="Avg. Area Income">Average Area Income:</label>
-            <input type="number" id="Avg. Area Income" name="Avg. Area Income" required><br>
+            <input type="number" id="Avg. Area Income" name="Avg. Area Income" step="0.001" placeholder="Enter the average area income" required><br>
 
             <label for="Avg. Area House Age">Average House Age:</label>
-            <input type="number" id="Avg. Area House Age" name="Avg. Area House Age" required><br>
+            <input type="number" id="Avg. Area House Age" name="Avg. Area House Age" step="0.01" placeholder="Enter the average house age" required><br>
 
             <label for="Avg. Area Number of Rooms">Total Number of Rooms:</label>
-            <input type="number" id="Avg. Area Number of Rooms" name="Avg. Area Number of Rooms" required><br>
+            <input type="number" id="Avg. Area Number of Rooms" name="Avg. Area Number of Rooms" placeholder="Enter the average number of rooms" required><br>
 
             <label for="Avg. Area Number of Bedrooms">Number of Bedrooms:</label>
-            <input type="number" id="Avg. Area Number of Bedrooms" name="Avg. Area Number of Bedrooms" required><br>
+            <input type="number" id="Avg. Area Number of Bedrooms" name="Avg. Area Number of Bedrooms" placeholder="Enter the average number of bedrooms" required><br>
 
             <label for="Area Population">Average Area Population:</label>
-            <input type="number" id="Area Population" name="Area Population" required><br>
+            <input type="number" id="Area Population" name="Area Population" step="0.001" placeholder="Enter the average area population" required><br>
 
             <input type="submit" value="Predict Price">
         </form>
